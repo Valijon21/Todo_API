@@ -1,15 +1,15 @@
-from msilib.schema import ServiceInstall
-from rest_framework.generics import ListAPIView, RetrieveAPIView
+
+from rest_framework.generics import ListAPIView,RetrieveAPIView
 from .models import Toodo
-from .serializers import ToodoSerializer
+from .serializers import TodoSerializer
 
 # Create your views here.
 #Toodo obyektlarni list kurinishida chiqarib beradi
-class ListToodo(ListAPIView):
+class ListTodo(ListAPIView):
     queryset = Toodo.objects.all()
-    serailizer_class = ToodoSerializer
+    serializer_class = TodoSerializer
 
 # Bitta modelni uzini detailni yani bittasin kursatadi
-class DetailToodo(RetrieveAPIView):
+class DetailTodo(RetrieveAPIView):
     queryset = Toodo.objects.all()
-    serializer_class = ToodoSerializer
+    serializer_class = TodoSerializer

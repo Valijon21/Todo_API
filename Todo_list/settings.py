@@ -39,11 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #mahaliy
-    'todos.apps.TodosConfig',
+    'todos',
     #tashqi
     'rest_framework',
 ]
-RESET_FRAMEWORK = {
+REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES':[
         'rest_framework.permissions.AllowAny'
     ]
